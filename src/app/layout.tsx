@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Sidebar from "@/components/own-ui/sidebar";
-import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/next-theme";
 import dynamic from "next/dynamic";
+
+import "./globals.css";
+import { cn } from "@/lib/utils";
+
+import Sidebar from "@/components/own-ui/sidebar";
 import { ModeToggle } from "@/components/own-ui/theme-toggler";
 const TimeDisplay = dynamic(() => import("@/components/own-ui/time"), {
   ssr: false,
 });
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,6 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body
         className={cn(
           `${inter.className}`,

@@ -58,7 +58,6 @@ export default function InputBox() {
     const fetchWeather = () => {
       const unitTemp = unit === "°C" ? "M" : unit === "°F" ? "I" : "S";
       if (filter === "latlng") {
-        console.log("logging latlng", latlng);
         getHistoricWeather({
           lat: latlng.lat,
           lng: latlng.lng,

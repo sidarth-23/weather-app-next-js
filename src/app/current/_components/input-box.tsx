@@ -41,12 +41,10 @@ export default function InputBox() {
   useEffect(() => {
     // Clear the previous timer if there is any
     let timer: NodeJS.Timeout | null = null;
-    console.log("logging filter", filter);
     // Function to be debounced
     const fetchWeather = () => {
       const unitTemp = unit === "°C" ? "M" : unit === "°F" ? "I" : "S";
       if (filter === "latlng") {
-        console.log("logging latlng", latlng);
         getCurrentWeather({
           lat: latlng.lat,
           lng: latlng.lng,
