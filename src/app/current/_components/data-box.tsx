@@ -43,7 +43,7 @@ export default function DataBox() {
   return (
     <div className="flex flex-col gap-3 w-full">
       <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div className="box-border min-h-56 w-11/12 bg-gray-200 dark:bg-gray-800 p-3 lg:px-8 flex flex-col items-center justify-center rounded-md gap-6">
+        <div className="box-border min-h-56 w-full bg-gray-200 dark:bg-gray-800 p-3 lg:px-8 flex flex-col items-center justify-center rounded-md gap-6">
           <div className="w-full border-b-[1px] border-muted-foreground">
             <p className="text-2xl pb-2 font-semibold">
               {data.data[0].city_name}
@@ -71,13 +71,13 @@ export default function DataBox() {
             </div>
           </div>
         </div>
-        <div className="box-border min-h-56 w-11/12 bg-gray-200 dark:bg-gray-800 p-3 lg:px-8 flex flex-col items-center rounded-md gap-6">
+        <div className="box-border min-h-56 w-full bg-gray-200 dark:bg-gray-800 p-3 lg:px-8 flex flex-col items-center rounded-md gap-6">
           <div className="w-full border-b-[1px] border-muted-foreground">
             <p className="text-center text-2xl pb-2 font-semibold">UV Index</p>
           </div>
           <p className="text-6xl font-bold ">{data.data[0].uv}</p>
         </div>
-        <div className="box-border min-h-56 w-11/12 bg-gray-200 dark:bg-gray-800 p-3 lg:px-8 flex flex-col items-center rounded-md gap-6">
+        <div className="box-border min-h-56 w-full bg-gray-200 dark:bg-gray-800 p-3 lg:px-8 flex flex-col items-center rounded-md gap-6">
           <div className="w-full border-b-[1px] border-muted-foreground">
             <p className="text-center text-2xl pb-2 font-semibold">Wind</p>
           </div>
@@ -97,7 +97,7 @@ export default function DataBox() {
             </div>
           </div>
         </div>
-        <div className="box-border min-h-56 w-11/12 bg-gray-200 dark:bg-gray-800 p-3 lg:px-8 flex flex-col items-center rounded-md gap-6">
+        <div className="box-border min-h-56 w-full bg-gray-200 dark:bg-gray-800 p-3 lg:px-8 flex flex-col items-center rounded-md gap-6">
           <div className="w-full border-b-[1px] border-muted-foreground">
             <p className="text-center text-2xl pb-2 font-semibold">Daylight</p>
           </div>

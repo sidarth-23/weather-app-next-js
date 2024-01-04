@@ -44,7 +44,7 @@ export default function RootLayout({
               <ModeToggle />
             </div>
             <Sidebar />
-            <div className="p-4 pl-0 w-full">
+            <div className="p-2 md:p-4 pl-0 w-full">
               <TimeDisplay />
               {children}
             </div>
