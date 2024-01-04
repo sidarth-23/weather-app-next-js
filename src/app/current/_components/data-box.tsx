@@ -20,19 +20,26 @@ export default function DataBox() {
       </div>
     );
 
-    const today = new Date();
-    const dateString = today.toISOString().split('T')[0];
-    
-    const sunriseTime = new Date(`${dateString}T${data.data[0].sunrise}Z`);
-    const sunriseLocalTime = sunriseTime.toLocaleString("en-US", {
+  const today = new Date();
+  const dateString = today.toISOString().split("T")[0];
+
+  const sunriseTime = new Date(`${dateString}T${data.data[0].sunrise}Z`);
+  const sunriseLocalTime = sunriseTime
+    .toLocaleString("en-US", {
       timeZone: data.data[0].timezone,
-    }).split(',')[1];
-    
-    const sunsetTime = new Date(`${dateString}T${data.data[0].sunset}Z`);
-    const sunsetLocalTime = sunsetTime.toLocaleString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+    })
+    ;
+
+  const sunsetTime = new Date(`${dateString}T${data.data[0].sunset}Z`);
+  const sunsetLocalTime = sunsetTime
+    .toLocaleString("en-US", {
       timeZone: data.data[0].timezone,
-    }).split(',')[1];
-  console.log(sunriseLocalTime, sunsetLocalTime);
+      hour: "2-digit",
+      minute: "2-digit",
+    })
+    ;
   return (
     <div className="flex flex-col gap-3 w-full">
       <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -98,17 +105,13 @@ export default function DataBox() {
             <div className=" flex gap-1 capitalize">
               <Sunrise className="text-muted-foreground" />
               <p className="text-muted-foreground font-bold">sunrise: </p>
-              <p>
-                {sunriseLocalTime}
-              </p>
+              <p>{sunriseLocalTime}</p>
             </div>
 
             <div className=" flex gap-1 capitalize">
               <Sunset className="text-muted-foreground" />
               <p className="text-muted-foreground font-bold">sunset: </p>
-              <p>
-                {sunsetLocalTime}
-              </p>
+              <p>{sunsetLocalTime}</p>
             </div>
           </div>
         </div>
