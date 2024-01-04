@@ -75,7 +75,7 @@ export default function DataBox() {
           <div className="w-full border-b-[1px] border-muted-foreground">
             <p className="text-center text-2xl pb-2 font-semibold">UV Index</p>
           </div>
-          <p className="text-6xl font-bold ">{data.data[0].uv}</p>
+          <p className="text-6xl font-bold ">{data.data[0].uv.toFixed(2)}</p>
         </div>
         <div className="box-border min-h-56 w-full bg-gray-200 dark:bg-gray-800 p-3 lg:px-8 flex flex-col items-center rounded-md gap-6">
           <div className="w-full border-b-[1px] border-muted-foreground">
